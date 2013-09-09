@@ -1,7 +1,7 @@
 OS=wheezy
-KERNEL=linux-image-2.6-amd64
-MIRROR=http://ftp.fr.debian.org/debian/
-PACKAGES=openssh-server,tsung
+KERNEL=linux-image-amd64
+MIRROR=http://ftp.us.debian.org/debian/
+PACKAGES=openssh-server
 
 dd if=/dev/null bs=1M seek=8192 of=disk.raw
 
