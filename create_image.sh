@@ -1,7 +1,7 @@
 OS=wheezy
 KERNEL=linux-image-amd64
 MIRROR=http://ftp.us.debian.org/debian/
-PACKAGES=openssh-server
+PACKAGES=openssh-server sudo ca-certificates
 
 dd if=/dev/null bs=1M seek=8192 of=disk.raw
 

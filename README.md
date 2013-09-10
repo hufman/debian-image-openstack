@@ -13,11 +13,12 @@ Steps:
 1. apt-get install debootstrap mbr kpartx glance
 2. ./create\_image.sh
 3. ./setup\_fstab.sh
-4. ./setup\_extlinux.sh
-5. ./setup\_configdrive.sh
-6. Optional steps:
+4. ./setup\_network.sh
+5. ./setup\_extlinux.sh
+6. ./setup\_configdrive.sh
+7. Optional steps:
   * ./install\_chef.sh
-7. ./convert\_to\_qcow.sh
-8. ./upload\_to\_glance.sh NAME
+8. ./convert\_to\_qcow.sh
+9. ./upload\_to\_glance.sh NAME
 
 
