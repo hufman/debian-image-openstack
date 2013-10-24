@@ -1,3 +1,4 @@
+echo -e "auto lo\niface lo inet loopback" >> mnt/etc/network/interfaces
 echo -e "auto eth0\niface eth0 inet dhcp" >> mnt/etc/network/interfaces
 echo -e "auto em1\niface em1 inet dhcp" >> mnt/etc/network/interfaces
 

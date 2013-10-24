@@ -1,7 +1,7 @@
 OS=wheezy
 KERNEL=linux-image-amd64
 MIRROR=http://ftp.us.debian.org/debian/
-PACKAGES=openssh-server sudo ca-certificates
+PACKAGES=openssh-server,sudo,ca-certificates
 
 dd if=/dev/null bs=1M seek=8192 of=disk.raw
 
@@ -36,4 +36,5 @@ chroot mnt/ /bin/bash -c "DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locale
 chroot mnt/ apt-get upgrade
 chroot mnt/ apt-get clean
 
+echo "stackguest" > mnt/etc/hostname
 rm mnt/etc/udev/rules.d/70-persistent-net.rules
