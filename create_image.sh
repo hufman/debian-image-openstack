@@ -31,7 +31,12 @@ chroot mnt/ apt-get update
 chroot mnt/ apt-get install locales
 chroot mnt/ locale-gen en_US.utf8
 
+echo "LANG=en_US.UTF-8" >> mnt/etc/environment
+echo "LANGUAGE=en_US.UTF-8" >> mnt/etc/environment
+echo "LANG=en_US.UTF-8" >> mnt/etc/default/locale
+echo "LANGUAGE=en_US.UTF-8" >> mnt/etc/default/locale
 chroot mnt/ /bin/bash -c "DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales"
+chroot mnt/ /bin/bash -c "locale-gen --purge en_US.UTF-8"
 
 chroot mnt/ apt-get upgrade
 chroot mnt/ apt-get clean
